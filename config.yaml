@@ -1,0 +1,159 @@
+# news-briefing config
+#
+# category_limits bepaalt hoeveel artikelen elke categorie maximaal toont
+# (na ophalen, chronologisch nieuwste eerst — zie opmerking hieronder).
+# default_category_limit vangt categorieën op die je zelf toevoegt en niet
+# hieronder specifiek instelt.
+
+lookback_hours: 30          # iets meer dan 24u zodat je geen gat krijgt in het weekend
+output_dir: "output"
+default_category_limit: 10
+
+category_limits:
+  "België": 5
+  "Cybersecurity": 10
+  "Tech": 15
+  "AI": 8
+  "Gaming": 10
+  "Wereld": 8
+  "Reddit": 20
+
+# Voorkomt dat 1 hyperactieve subreddit (r/interestingasfuck bv. post erg
+# vaak) de hele Reddit-categorie inpikt. Met cap 3 komen rustigere subs als
+# r/BEFire of r/Proxmox ook effectief aan bod als ze iets goeds posten.
+max_per_source:
+  "Reddit": 3
+
+# BELANGRIJK over "belangrijkste eerst": zonder AI-call kunnen we niet echt
+# objectief inschatten wat "belangrijk" is. Voor de RSS-categorieën hieronder
+# is de sortering dus gewoon chronologisch (nieuwste eerst), gepoold uit
+# meerdere bronnen per categorie. Voor Reddit is dat anders: die vraagt
+# Reddit's eigen "top van vandaag" (score-based) op, dus dat IS een echte
+# populariteitsranking.
+
+feeds:
+  # --- België (cap: 5) ---
+  - url: "https://www.vrt.be/vrtnws/nl.rss.articles.xml"
+    category: "België"
+  # De Standaard-feed gaf bij Dali een XML-parsefout (hun kant, niet de onze).
+  # Voeg hier gerust een alternatief toe zodra je een werkende feed hebt getest,
+  # bv. HLN, Nieuwsblad, De Morgen - test met --dry-run voor je 'm laat staan.
+
+  # --- Cybersecurity (cap: 10) ---
+  - url: "https://krebsonsecurity.com/feed/"
+    category: "Cybersecurity"
+  - url: "https://feeds.feedburner.com/TheHackersNews"
+    category: "Cybersecurity"
+  - url: "https://www.bleepingcomputer.com/feed/"
+    category: "Cybersecurity"
+
+  # --- Tech (cap: 15) - leuke/coole dingen: producten, software, gadgets ---
+  - url: "https://www.theverge.com/rss/index.xml"
+    category: "Tech"
+  - url: "https://www.engadget.com/rss.xml"
+    category: "Tech"
+  - url: "https://techcrunch.com/feed/"
+    category: "Tech"
+  - url: "https://feeds.arstechnica.com/arstechnica/index"
+    category: "Tech"
+  - url: "https://9to5mac.com/feed/"
+    category: "Tech"
+
+  # --- AI (cap: 8) - nieuwe modellen, tools, opvallende releases ---
+  - url: "https://venturebeat.com/category/ai/feed/"
+    category: "AI"
+  - url: "https://techcrunch.com/category/artificial-intelligence/feed/"
+    category: "AI"
+  - url: "https://arstechnica.com/tag/ai/feed/"
+    category: "AI"
+
+  # --- Gaming (cap: 10) - nieuwe games, aankondigingen, industrie-nieuws ---
+  - url: "https://www.pcgamer.com/rss/"
+    category: "Gaming"
+  - url: "https://www.eurogamer.net/feed"
+    category: "Gaming"
+  - url: "https://www.polygon.com/rss/index.xml"
+    category: "Gaming"
+  - url: "https://kotaku.com/rss"
+    category: "Gaming"
+
+  # --- Wereld (cap: 8) - grote internationale bronnen, geen NL-specifiek nieuws ---
+  - url: "https://www.theguardian.com/world/rss"
+    category: "Wereld"
+  - url: "https://feeds.npr.org/1004/rss.xml"
+    category: "Wereld"
+
+# --- Reddit (cap: 20) ---
+# Aparte sectie omdat dit 1 gecombineerde multireddit-feed is met Reddit's
+# eigen "top van de dag" sortering (sort=top&t=day), i.p.v. losse RSS-feeds.
+#
+# Dit is een gecureerde versie van de subreddit-lijst die je doorgaf: anime/
+# gacha-fandom subs (Genshin, HonkaiStarRail, Bleach*, SDS*, TowerofGod, ...)
+# en pure meme/reactie-dumps (funny, memes, HolUp, TIHI, wholesomememes,
+# TikTokCringe, cursedcomments, ...) heb ik eruit gehaald. Tech/hardware/
+# homelab, gaming-nieuws, piracy/freebies en België bleven staan. Voeg gerust
+# terug toe/verwijder wat je wil, het is gewoon een platte lijst.
+reddit:
+  enabled: true
+  category: "Reddit"
+  sort: "top"
+  time_filter: "day"        # opties: day, week, month
+  fetch_limit: 30           # haalt er wat meer op dan de cap van 20, als buffer
+  subreddits:
+    # tech / hardware / homelab
+    - Android
+    - BambuLab
+    - DataHoarder
+    - GamingLaptops
+    - GamingPCBuildHelp
+    - MetaQuestVR
+    - OculusQuest
+    - PcBuild
+    - PcBuildHelp
+    - Proxmox
+    - ROGAlly
+    - computers
+    - cybersecurity_help
+    - CyberSecurityAdvice
+    - functionalprint
+    - gadgets
+    - macbook
+    - pcbuilding
+    - pcmasterrace
+    - samsung
+    - virtualreality
+    - 3Dprinting
+    - 3dprinters
+    # gaming nieuws / releases / deals
+    - Eldenring
+    - eldenringdiscussion
+    - FreeGamesOnSteam
+    - GameDeals
+    - SteamDeck
+    - VRGaming
+    - cs2
+    - csgo
+    - freegames
+    - humblebundles
+    - steamdeals
+    # piracy / freebies
+    - CrackWatch
+    - FREEMEDIAHECKYEAH
+    - Piracy
+    - PiratedGames
+    - QuestPiracy
+    - Roms
+    # België / algemeen interessant
+    - belgium
+    - interestingasfuck
+
+# Optioneel: e-mail versturen na het genereren. Laat email.enabled op false
+# als je alleen het bestand lokaal wil lezen.
+email:
+  enabled: false
+  smtp_host: "smtp.example.com"
+  smtp_port: 587
+  smtp_user: "jouw_adres@example.com"
+  smtp_pass_env: "NEWSLETTER_SMTP_PASS"   # naam van de env var met het wachtwoord
+  to: "jouw_adres@example.com"
+  subject_prefix: "Ochtendbriefing"

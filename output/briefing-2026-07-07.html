@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ochtendbriefing — 2026-07-07</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Karla', -apple-system, sans-serif;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    line-height: 1.55;
+    color: #1c1c1c;
+    background: #fafaf7;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #131417; color: #e8e6e1; }
+    .card { background: #1d1e22 !important; border-color: #2c2e33 !important; }
+    .meta span { color: #9a9a9a !important; }
+    .summary { color: #c7c5c0 !important; }
+    header { border-color: #33353a !important; }
+    .rank { color: #45474d !important; }
+  }
+
+  header {
+    border-bottom: 3px solid #1c1c1c;
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .subtitle { font-size: 0.9rem; opacity: 0.6; margin: 0; }
+
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 36px; }
+  .nav-pill {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border: 1.5px solid var(--accent);
+    border-radius: 999px;
+    padding: 6px 14px;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  .nav-pill:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); transform: translateY(-1px); }
+  .nav-pill .count { opacity: 0.7; }
+
+  .category { margin-bottom: 44px; scroll-margin-top: 16px; }
+  .category h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--accent);
+    border-bottom: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .cat-icon { font-size: 1.15rem; }
+  .category h2 .count { font-family: 'Karla', sans-serif; font-size: 0.8rem; font-weight: 400; opacity: 0.55; margin-left: auto; }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 12px;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e8e6e0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 12px;
+    transition: border-color 0.15s ease;
+  }
+  .card:hover { border-color: var(--accent); }
+  .thumb {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background: #eee;
+  }
+  .rank {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #d8d5cd;
+    line-height: 1.4;
+    flex-shrink: 0;
+  }
+  .card-body { min-width: 0; }
+  .card h3 { font-size: 1rem; font-weight: 500; margin: 0 0 6px; line-height: 1.35; }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { text-decoration: underline; }
+  .meta { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: #888; margin-bottom: 8px; }
+  .favicon { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+  .summary { font-size: 0.92rem; color: #444; margin: 0; }
+
+  footer { margin-top: 40px; font-size: 0.8rem; opacity: 0.5; text-align: center; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Ochtendbriefing</h1>
+    <p class="subtitle">2026-07-07 · 73 artikelen · 7 categorieën</p>
+  </header>
+
+  <nav><a href="#belgi" class="nav-pill" style="--accent:#c8963e">🇧🇪 België <span class="count">5</span></a><a href="#cybersecurity" class="nav-pill" style="--accent:#1d6f6f">🛡️ Cybersecurity <span class="count">10</span></a><a href="#tech" class="nav-pill" style="--accent:#a1483a">💻 Tech <span class="count">15</span></a><a href="#ai" class="nav-pill" style="--accent:#6b4c9a">🤖 AI <span class="count">8</span></a><a href="#gaming" class="nav-pill" style="--accent:#2f6b8f">🎮 Gaming <span class="count">10</span></a><a href="#wereld" class="nav-pill" style="--accent:#2f6b3a">🌍 Wereld <span class="count">8</span></a><a href="#reddit" class="nav-pill" style="--accent:#cc5023">👽 Reddit <span class="count">17</span></a></nav>
+
+  
+      <section id="belgi" class="category" style="--accent:#c8963e">
+        <h2><span class="cat-icon">🇧🇪</span> België <span class="count">5</span></h2>
+        <div class="cards">
+        <article class="card">
+          <img class="thumb" src="https://images.vrt.be/vrtnws_share/2026/07/02/8c9a9b54-8e72-4936-a3c7-05a46fd682f2.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://vrtnws.be/p.Yb61W3qDD" target="_blank" rel="noopener">Onderzoekscommissie over Anderlechtse Haard na 143 uur aan hoorzittingen afgelopen</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vrtnws.be&sz=32" alt="" loading="lazy"><span>VRT NWS: nieuws</span></div>
+            <p class="summary">De onderzoekscommissie naar de werking van de Brusselse huisvestingsmaatschappij Anderlechtse Haard is maandagavond na 143 uur aan hoorzittingen afgelopen. Het verslag met de aanbevelingen van de commissie wordt op 17 juli gestemd in het Brussels Parlement.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://images.vrt.be/vrtnws_share/2020/04/17/7fbaafd8-8088-11ea-aae0-02b7b76bf47f.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://vrtnws.be/p.dLe3p9E9N" target="_blank" rel="noopener">&quot;Beschermvrouw van onze letteren&quot;: Nederlandse schrijfster Connie Palmen (70) wint Constantijn Huygensprijs</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vrtnws.be&sz=32" alt="" loading="lazy"><span>VRT NWS: nieuws</span></div>
+            <p class="summary">De Constantijn Huygens-prijs, de jaarlijkse prijs voor een heel literair oeuvre, is toegekend aan de Nederlandse Connie Palmen. Zij is onder meer bekend van de roman ‘De wetten’. De jury prijst haar loyaliteit aan de literatuur en noemt haar &quot;een beschermvrouw van de letteren&quot;.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://images.vrt.be/vrtnws_share/2026/07/06/44e0eb23-1b47-42d4-83af-fc436e5253c9.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://vrtnws.be/p.APxWDVM6o" target="_blank" rel="noopener">Brand in Brussels museum Kanal is ontstaan in ruimte onder het dak: &quot;zullen nagaan of structuur van het gebouw is aangetast&quot;</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vrtnws.be&sz=32" alt="" loading="lazy"><span>VRT NWS: nieuws</span></div>
+            <p class="summary">Na een brand in het nieuwe Brusselse museum Kanal-Centre Pompidou moet worden nagegaan of de structuur van het gebouw is aangetast. De brand ontstond in een technische ruimte onder het dak en was snel onder controle, meldt de Brusselse brandweer. Op het moment van de brand was er niemand in het gebouw aanwezig. De opening van het museum was oorspronkelijk voorzien in november.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://images.vrt.be/vrtnws_share/2026/07/06/94022a65-870e-4446-a670-171d6132da9d.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://vrtnws.be/p.DYVk8B56y" target="_blank" rel="noopener">Nieuwe houten wandelpromenade boven de Durme in centrum Lokeren officieel geopend</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vrtnws.be&sz=32" alt="" loading="lazy"><span>VRT NWS: nieuws</span></div>
+            <p class="summary">De stad Lokeren heeft de nieuwe houten wandelpromenade boven de Durme officieel geopend. De promenade verbindt de gratis parking Grote Kaai met de Markt. De officiële opening markeert ook de voltooiing van de laatste afwerkingen, waaronder de ledverlichting. Eerder kwam er kritiek op de kostprijs van het hele project.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://images.vrt.be/vrtnws_share/2025/07/25/e46e20b7-89d4-4133-9b5a-a154fbe1fd4b.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://vrtnws.be/p.7n8YY07j6" target="_blank" rel="noopener">Oudenburg annuleert The Big Jump door blauwalgen in kanaal Brugge-Oostende</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=vrtnws.be&sz=32" alt="" loading="lazy"><span>VRT NWS: nieuws</span></div>
+            <p class="summary">Oudenburg annuleert The Big Jump omdat er blauwalgen zijn gevonden in de kanalen Brugge-Oostende en Plassendale-Nieuwpoort. Tijdens The Big Jump springen duizenden mensen in heel Europa in lokale rivieren en waterlopen om schoon zwemwater te eisen. Ook vraagt de stad aan iedereen om weg te blijven van het water.</p>
+          </div>
+        </article></div>
+      </section>
+      <section id="cybersecurity" class="category" style="--accent:#1d6f6f">
+        <h2><span class="cat-icon">🛡️</span> Cybersecurity <span class="count">10</span></h2>
+        <div class="cards">
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj80nucNUGoxxOtE3SUY1SkDSu77qENrl96c2MUoLWdwAo3ZVoA4FS2QfOdM9c5bsZUJdX1ZxIsXgu7pvVfUzXz3GMZJHmblFTjv5C08dbxvLqXol72iHaD-zH950EZdXUCS-b7F2T-bn8SgqQb9nXA-uOPIaX5V0eaNNmKlQJfWHAKaPAhqsgNL0wTgJH6/s1600/cavern.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html" target="_blank" rel="noopener">Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">An Iranian hacking group affiliated with Iran&#x27;s Ministry of Intelligence and Security (MOIS) has been wielding a previously undocumented modular command-and-control (C2) framework dubbed Cavern (aka Cav3rn) targeting Israeli organizations. The activity, which has primarily singled out IT providers and government sectors, has been attributed to a threat cluster tracked by Check Point Research</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG42lgj1grtq5EQICr-9RYvPU59uHFRBluzVoZ3TZLXEXBcF5bOPerpb_Ck-e6oNz6P4MO1VAiqbBXuPbImhng1CoRnRYHWSZTGOloHmYB5khhpCK5wW348uMgqmWIjTQPnOwCGV7OiPXJoJDWV0n1IPGP80hADXD3AnmRKbTb8jxyGQenhlgIpvNo29I/s1600/linux-kvm.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html" target="_blank" rel="noopener">16-Year-Old Linux KVM Flaw Lets Guest VMs Escape to Host on Intel and AMD x86 Systems</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">A use-after-free bug in Linux&#x27;s KVM hypervisor can be triggered from a guest virtual machine to corrupt the shadow-page state of the host kernel that runs it. Dubbed &#x27;Januscape&#x27; and tracked as CVE-2026-53359, the flaw sits in the shadow MMU code that KVM shares across both Intel and AMD. The public proof-of-concept panics the host; the researcher claims that a separate, unreleased exploit</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge0sNgi3moDw0JpFy3UdFB6bK0oxjaqc8ORZFecu5QqxA_wgpoWT1t56L9u2wScSkxYHP2aLO3N01yCPd8IkTBEyc_MvxIaG6BKzneB0LcXuwO_nEorvNvyvuEL3Krp003q6xOF0gePQCXN_bDswxBIhqV7q89_HY9mIxJ5ySShQwtU_jSa9FQnt0tq0RU/s1600/admin.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html" target="_blank" rel="noopener">Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">Threat actors have been observed attempting to exploit a recently patched critical security flaw in Gitea Docker images, according to Sysdig. The vulnerability in question is CVE-2026-20896 (CVSS score: 9.8), a vulnerability that stems from the DevOps platform trusting the &quot;X-WEBAUTH-USER&quot; header from any source IP address, effectively allowing an unauthenticated internet client to get elevated</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLyTSo2j_jLDBALDaJ6S4gpQf2xkxgGWRslJKuVLIrY-J7nsEG-zNgi02OKeABO5BNXCI1C05oTO1TdYYMtzjCHE7ugevubBOybwilFTXFY6wgXDBVkzMV3-cyYyZUfd-sfXmlfTtgyouay2kJYwxfclTk2M6PPOaLWdR-26P3TYuIm1l5wjQfoPVzk-ca/s1600/recapss.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/monday-recap-proxy-botnets-browser.html" target="_blank" rel="noopener">⚡ Weekly Recap: Proxy Botnets, Browser Ransomware, AI Agent Tricks, Fake PoC Malware and More</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">A streaming box should not need a threat model. Neither should a username field, a demo repo, a reset flow, or a browser permission prompt. That is the irritating part this week: the risky pieces were ordinary. Home devices became a routing cover. Clean code pulled dirt from a dependency. Identity shortcuts aged badly. AI systems trusted the wrong instructions. Same soft spot throughout: trust</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeiJymlyu6GGdzNT0Fb3yi6rYZdNn_XCoDUKKV9zSD_p17gngK7FL-IDm5LLTYlGx6Rn2Em6v0TSDq7u_1lttLyp1b97z7YrjSrFK7MrYAG2k1YXI91fHRRTRoPV1xIQSukE1DwqRcHY6i6fIS0jC2CaKv18OhFWHi2fKvXRKmZ6MBgSoRMDWGxmQKlfTt/s1600/aisoc.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/how-to-evaluate-ai-soc-platform-in-2026.html" target="_blank" rel="noopener">How to Evaluate an AI SOC Platform in 2026: 6 Capabilities That Separate Leaders from Bolt-On AI solutions</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">Building a shortlist for an AI SOC evaluation can be tough. SIEM, SOAR, and pureplay AI SOC vendors are all saying the same thing. But behind the identical label sit very different products, from chat assistants bolted onto a legacy SIEM to agent platforms that run detection, triage, investigation, and response on their own data foundation. Whether a platform will materially change outcomes for</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0L8iGbVZ6lxBg26K2nsc6uYpFED8ZcgCtrh4C34U4oixLPC0OKHOWWpiPBfaSwe-tpOTbCqZfRZQTMoropayZXEm0GXTtKpyBuBPRk9zF-0WPRprknYiaI2DXLDZnQb8t70R7-0Fjl5G-NNCQFF-Ex40vQZMbUJmJ2JLyXJUjYdAVvgjl3_oBF5wbHrHl/s1600/income-tax.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/suspected-china-nexus-hackers-use-fake.html" target="_blank" rel="noopener">Suspected China-Nexus Hackers Use Fake Indian Tax Filing Utility to Deploy DcRAT</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">A suspected China-nexus threat activity cluster has been observed targeting Indian taxpayers, tax professionals, and corporate finance teams to deliver a remote access trojan designed to steal sensitive data from compromised hosts. The multi-stage campaign, codenamed Operation DragonReturn by Seqrite Labs, involves sending spear-phishing emails impersonating the Income Tax Department of India.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLYJDaMKVJEwbsJA1eYJaguihQzJv2dpnIl512z5xBuWojpidgE7mvbGWz27QN-Dnwx74qvCYOYGQNY4h2K00TzF_hz8D6M9gNxWALh2f2bz6jrzwuKvTuuLsb6kwU1O72qPUIjQYHtRwGPCCUYt-TDFJEZ7frhvxvsQa4vWP7HkLRPtXCi0ovIACzurMP/s1600/TrojPix-attack.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/new-trojpix-attack-leaks-data-from-air.html" target="_blank" rel="noopener">New TrojPix Attack Leaks Data From Air-Gapped Systems via Video Cable Emissions</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">Researchers at Shandong University have shown a fast new way to pull data off computers that are cut off from every network. The technique, called TrojPix, tweaks on-screen pixels in ways the eye cannot see, so that the video cable carrying them radiates a faint radio signal a nearby receiver can decode. But TrojPix works only once malware is already on the target machine, so it</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVcOvCD8qFylCqOCpN8Rnl9cnxNkIeGxNbVKzlsKXY_7Nuw2xvYsckNEHKVM5ntvT2JAureArFIyApOvGLu52wpCG1xbHO8Y5xBmOAkSI3RoyEegmlNxs_gJip32Uzv_inXS7seOeRB1d3mw9SNIggoqgIApupRF2etBx5U_IFkuQz4_WNBL0Q1oi1l77q/s1600/javarat.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/new-java-based-quimarat-maas-built-to.html" target="_blank" rel="noopener">New Java-Based QuimaRAT MaaS Built to Run on Windows, Linux, and macOS</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">Cybersecurity researchers have flagged a novel Java-based remote access trojan (RAT) called QuimaRAT that&#x27;s capable of targeting Windows, Linux, and macOS environments. According to LevelBlue, the cross-platform malware is advertised under a malware-as-a-service (MaaS) model, costing anywhere between $150 for one month to $1,200 for lifetime access. Other subscription tiers include $300 for</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ_WItJUaS3rk5pAYa5yOsKuUt0Yovlv1T-jIz2GBBhcmMjToCgnWuEApyWfgDwngwAPcEGke0zwo_2DKKHaN9vzzHMAnd7Z3esepEvjSM022BzOdjo0sJW2bSMlslKXVv5Fg701ozva1HDgZPJV4Qya8Xevye-eT4dB0UmIJK9CKq-_wLnEGgNYigRLzh/s1600/opera-data-leak.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html" target="_blank" rel="noopener">Opera GX Flaw Let Malicious Sites Auto-Install Mods to Steal Data From Visited Pages</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">Researchers found a flaw in Opera GX, the gaming-focused version of the Opera browser, that let a malicious website silently install a browser add-on and use it to lift specific data from the pages a victim visits. In a proof of concept, they reconstructed a signed-in user&#x27;s full Gmail address from a single visit, with no click. Opera has patched the flaw and says it found no evidence that</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjw4ZKsU9PwSPcL_Vs2ZqYIh0ahMuSFSNcCv_Y5MiM7MRsUgeZCDa5XTSWVYQXjLg-ByFbm4cHoo-8SSeWrB7KSdYrl4A1Ioif-v8NLNA43asXEHtYjn6uad21Savnzi_1iJ0YQ44iuXECEIBbyc3l7lJ9l2pdofVvP7dM3n9Ji5OeUeuPDHX5sqBJreUUB/s1600/ai-skills.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://thehackernews.com/2026/07/new-skillcloak-technique-lets-malicious.html" target="_blank" rel="noopener">SkillCloak Lets Malicious AI Agent Skills Evade Static Scanners with Self-Extracting Packing</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=thehackernews.com&sz=32" alt="" loading="lazy"><span>The Hacker News</span></div>
+            <p class="summary">Scanners meant to catch malicious add-on &quot;skills&quot; for AI coding agents can be fooled by a few simple changes that leave the malware working, according to a new study from researchers at the Hong Kong University of Science and Technology. Their strongest trick slipped past every scanner tested more than 90% of the time, and the same team built a runtime checker that catches most of the</p>
+          </div>
+        </article></div>
+      </section>
+      <section id="tech" class="category" style="--accent:#a1483a">
+        <h2><span class="cat-icon">💻</span> Tech <span class="count">15</span></h2>
+        <div class="cards">
+        <article class="card">
+          
+          <span class="rank">01</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/gadgets/961895/hoto-pixeldrive-screwdriver-deal-sale" target="_blank" rel="noopener">Hoto’s PixelDrive screwdriver is down to $60, matching its best price</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">If your Prime Day purchases included a new desk, TV stand, bookshelf, or other furniture you still haven’t assembled, Hoto’s PixelDrive cordless screwdriver can help speed up the process. It’s currently on sale for $59.99 ($20 off) at Amazon, matching its best price to date. From tightening loose screws on furniture to repairing electronics, the […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">02</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/policy/961802/america-250-free-speech" target="_blank" rel="noopener">America’s greatest idea is still under threat</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">The United States of America recently turned 250 years old. What a spectacle! The fireworks were amazing, and millions of proud people celebrated across the nation - even around the world. France lit up the Eiffel Tower; Japan had fireworks. French fighter jets flew above New York City with trails of red, white, and blue […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">03</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/science/961483/doctor-zachary-rubin-md-interview" target="_blank" rel="noopener">Five questions for Dr. Rubin, who’s armed with a mic and a bowtie</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">Bullshit is cheap but truth is expensive. Anyone with half a brain cell can post wild misinformation that goes mega viral, which wastes the time and expertise of highly trained people who feel an obligation to inform others of the truth. Today I want you to meet one of those highly-trained people, Dr. Zachary Rubin, […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">04</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/games/961749/xbox-layoffs-compulsion-double-fine-indie" target="_blank" rel="noopener">Former Xbox studios Double Fine and Compulsion will keep games after going indie</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">Microsoft is spinning off four of its Xbox game studios - Compulsion Games, Double Fine Productions, Ninja Theory, and Undead Labs - as part of the restructuring announced today. However, two that are going independent, Double Fine and Compulsion, will get to keep their franchises and games catalogs, according to Xbox CEO Asha Sharma. &quot;Compulsion […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">05</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/column/961707/smart-glasses-ai-wearables-meta-surveillance-privacy" target="_blank" rel="noopener">I spy</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">I&#x27;ve long argued that Hollywood has simultaneously set and ruined our expectations for smart glasses. But after binge-watching two seasons of Netflix&#x27;s A Man on the Inside, this is perhaps the first time I&#x27;ve seen Hollywood, perhaps inadvertently, illustrate the biggest cultural problem with smart glasses as they stand today. In a nutshell, Ted Danson […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">06</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/gadgets/961612/xtra-muse-dji-osmo-pocket-3-ipad-air-magic-mouse-deal-sale" target="_blank" rel="noopener">The DJI Osmo Pocket 3 lookalike is down to $329</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">Initially, I was going to tell you about a good deal happening on the DJI Osmo Pocket 3, which is down from the $500 it’s sold at most of the year to $378 at multiple retailers. But there’s a better deal happening on a nearly identical portable camera, the Xtra Muse, which is $329 (roughly […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">07</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/podcast/961603/raina-penchansky-ali-berman-dba-uta-influencer-cliff-marketing" target="_blank" rel="noopener">Inside the big business of the creator economy, with the agents making it happen</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">We’ve got another special episode of Decoder today, recorded at the Cannes Lions advertising festival in the South of France. I’m talking with Ali Berman and Raina Penchansky, who run the Creators division at United Talent Agency. UTA is an enormous talent agency. Half the people you’ve ever heard speak or perform or who show […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">08</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/games/961632/nintendo-switch-europe-discontinued" target="_blank" rel="noopener">Nintendo will stop selling the original Switch in Europe next year</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">Nintendo is making a new version of the Switch 2 with a replaceable battery in Europe - but its predecessor has a very different future. As part of an updated FAQ about revisions to Nintendo hardware in Europe, the company confirmed that it will stop selling all iterations of the original Switch on the continent […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">09</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/report/960635/partiful-app-event-planning-data-palantir" target="_blank" rel="noopener">Can Partiful keep the party going?</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">One hundred dollars will buy you 8 pounds of glitter; 10 Domino&#x27;s pizzas; 406 miniature disco balls from Temu; or 100 cans of Coors Light. For a friend&#x27;s birthday party one year, Ayla D&#x27;Silva spent $100 on sour candy and made a &quot;sour candy salad.&quot; Even sweeter was that she didn&#x27;t have to foot the […]</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">10</span>
+          <div class="card-body">
+            <h3><a href="https://www.theverge.com/news/961546/xbox-layoffs-studio-sales-2026" target="_blank" rel="noopener">Microsoft is selling off four Xbox studios as part of significant gaming cuts</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="" loading="lazy"><span>The Verge</span></div>
+            <p class="summary">Microsoft is laying off 4,800 employees today, and more than 30 percent of the job losses are in the company&#x27;s Xbox division. The significant gaming cuts will affect nearly every part of Xbox and also involve four game studios being spun off to be run independently from Microsoft. Today&#x27;s layoffs, which are being described as […]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://www.engadget.com/img/gallery/google-will-now-count-all-android-backup-data-toward-your-storage-cap/l-intro-1783375302.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.engadget.com/2209189/google-will-now-count-all-android-backup-data-toward-your-storage-cap/" target="_blank" rel="noopener">Google will now count all Android backup data toward your storage cap</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="" loading="lazy"><span>Engadget - Technology News &amp; Expert Reviews</span></div>
+            <p class="summary">Fortunately, it shouldn&#x27;t take too much extra space.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://www.engadget.com/img/gallery/google-now-uses-your-uploaded-media-to-train-ai-so-heres-how-to-fix-that/l-intro-1783364935.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.engadget.com/2208978/google-now-uses-your-uploaded-search-media-to-train-ai/" target="_blank" rel="noopener">Google now uses your uploaded search media to train AI</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="" loading="lazy"><span>Engadget - Technology News &amp; Expert Reviews</span></div>
+            <p class="summary">A few simple adjustments to your settings will opt you out of Google&#x27;s latest AI-training method.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://www.engadget.com/img/gallery/why-are-people-ditching-wireless-earbuds-and-are-wired-headphones-really-making-a-comeback/l-intro-1783010048.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.engadget.com/2207185/wired-iems-vs-wireless-earbuds/" target="_blank" rel="noopener">Why are people ditching wireless earbuds, and are wired headphones really making a comeback?</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="" loading="lazy"><span>Engadget - Technology News &amp; Expert Reviews</span></div>
+            <p class="summary">Everything old is new again.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://www.engadget.com/img/gallery/microsofts-layoffs-extend-beyond-xbox/l-intro-1783360140.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.engadget.com/2208855/microsoft-layoffs-extend-beyond-xbox/" target="_blank" rel="noopener">Microsoft&#x27;s layoffs extend beyond Xbox</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="" loading="lazy"><span>Engadget - Technology News &amp; Expert Reviews</span></div>
+            <p class="summary">Microsoft is cutting an additional 3,200 jobs beyond those in the gaming division.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://www.engadget.com/img/gallery/ai-golem-tilly-norwood-is-reportedly-starring-in-a-feature-length-movie/l-intro-1783355190.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.engadget.com/2208729/ai-golem-tilly-norwood-is-reportedly-starring-in-a-feature-length-movie/" target="_blank" rel="noopener">AI golem Tilly Norwood is reportedly &#x27;starring&#x27; in a feature-length movie</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="" loading="lazy"><span>Engadget - Technology News &amp; Expert Reviews</span></div>
+            <p class="summary">Get excited for a feature film starring an AI character that doesn&#x27;t exist in any real way.</p>
+          </div>
+        </article></div>
+      </section>
+      <section id="ai" class="category" style="--accent:#6b4c9a">
+        <h2><span class="cat-icon">🤖</span> AI <span class="count">8</span></h2>
+        <div class="cards">
+        <article class="card">
+          
+          <span class="rank">01</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/" target="_blank" rel="noopener">US investors will soon get access to SK Hynix, another memory maker riding the AI boom</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">SK Hynix is experiencing a boom credited to AI. It will ride that to a multi-billion dollar US IPO, expected to take place on Friday.</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">02</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models-from-agents/" target="_blank" rel="noopener">Vercel CEO Guillermo Rauch on the fight to split off models from agents</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">&quot;The reality is, when you&#x27;re optimizing for production, you start looking at a price/performance,&quot; Guillermo Rauch tells TechCrunch.</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">03</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/" target="_blank" rel="noopener">You can now customize Siri’s pace and expressivity in the latest iOS 27 beta</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">The update is part of Apple&#x27;s broader effort to make Siri feel more natural and personal, as it rebuilds the assistant around generative AI.</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">04</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/" target="_blank" rel="noopener">Every major tech layoff in 2026 that has name-checked AI</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">05</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/" target="_blank" rel="noopener">If you use Google, you’re training its AI. Here’s how to opt out.</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">Consider this a belated PSA: A recent change to Google’s privacy settings is allowing the company to store more of your data, including media such as “images, files, and audio and video recordings,” to improve its AI models.</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">06</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/" target="_blank" rel="noopener">Microsoft lays off nearly 5,000 employees across Xbox, commercial sales</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">Microsoft cut around 4,800 roles, or 2.1% of its global workforce, on Monday — the latest in a series of layoffs that’s stoking fears of AI replacing jobs. The layoffs will hit Xbox and commercial sales the hardest.</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">07</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/" target="_blank" rel="noopener">Reddit is using LLMs to solve a problem LLMs largely created</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">In the AI era, platforms have no choice but to fight fire with fire to cull spam.</p>
+          </div>
+        </article>
+        <article class="card">
+          
+          <span class="rank">08</span>
+          <div class="card-body">
+            <h3><a href="https://techcrunch.com/2026/07/06/station-f-ramps-up-as-a-launchpad-for-europes-hottest-ai-startups/" target="_blank" rel="noopener">Station F ramps up as a launchpad for Europe’s hottest AI startups</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy"><span>AI News &amp; Artificial Intelligence | TechCrunch</span></div>
+            <p class="summary">Station F, a Paris-based startup hub founded by French billionaire Xavier Niel, is gearing up for a new edition of its F/ai accelerator program in a bid to strengthen its positioning as a stepping stone for promising AI startups.</p>
+          </div>
+        </article></div>
+      </section>
+      <section id="gaming" class="category" style="--accent:#2f6b8f">
+        <h2><span class="cat-icon">🎮</span> Gaming <span class="count">10</span></h2>
+        <div class="cards">
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/JegMFoHdKZzpeU4peYaSLV-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/gaming-industry/the-games-industry-reacts-to-xbox-layoffs-we-are-clearly-at-a-turning-point/" target="_blank" rel="noopener">The games industry reacts to Xbox layoffs: &#x27;We are clearly at a turning point&#x27;</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">3,200 employees are being put out of work, and people have thoughts.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/LQQGHCLznao6dbMqjcpAtJ-1280-80.png" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/games/rpg/cd-projekt-red-thanks-6000-edgerunners-2-advance-viewers-for-not-spoiling-the-show-in-stunning-display-of-opsec-thank-you-so-much-for-keeping-your-promise-properly/" target="_blank" rel="noopener">CD Projekt Red thanks 6000 Edgerunners 2 advance viewers for not spoiling the show in stunning display of opsec: &#x27;Thank you so much for keeping your promise properly&#x27;</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">Arasaka-level discipline</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/N4ELnbp33hNzAwj5dhYn6i-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/gaming-industry/legendary-former-tekken-boss-says-people-dont-properly-evaluate-hidetaka-miyazakis-remarkable-fromsoft-career/" target="_blank" rel="noopener">Legendary former Tekken boss says people don&#x27;t &#x27;properly evaluate&#x27; Hidetaka Miyazaki&#x27;s &#x27;remarkable&#x27; FromSoft career</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">Harada says the Souls series &quot;was the result of everything Miyazaki and his team had built up through their previous titles.&quot;</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/VozugrVEKQZfefZKRUxnzi-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/gaming-industry/even-obsidian-couldnt-escape-the-xbox-cuts-with-losses-ranging-from-a-21-year-veteran-artist-to-an-engineer-whod-only-been-there-2-months/" target="_blank" rel="noopener">Even Obsidian couldn&#x27;t escape the Xbox cuts, with losses ranging from a 21-year veteran artist to an engineer who&#x27;d only been there 2 months</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">No news was not, in fact, good news.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/Rp5o3JEewGVs9uTQa34SNU-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/gaming-industry/french-left-wing-leader-jean-luc-melenchon-declares-players-have-rights-too-over-the-death-of-physical-discs/" target="_blank" rel="noopener">French left-wing leader Jean-Luc Mélenchon declares &#x27;Players have rights too!&#x27; over the death of physical discs</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">&quot;Videogames are not mere merchandise—they are cultural assets.&quot;</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/kc77wf7a29YuNrdx6Ugct9-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/software/ai/wisconsin-residents-file-class-action-lawsuit-against-microsoft-alleging-unreasonable-and-excessive-noise-from-data-center/" target="_blank" rel="noopener">Wisconsin residents file class-action lawsuit against Microsoft, alleging &#x27;unreasonable and excessive noise&#x27; from data center</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">&#x27;Microsoft prides itself on being a good neighbor in the communities where we operate.&#x27;</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/22KaVjGWkynqhC4UiXmGiQ-1280-80.png" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/games/mmo/elder-scrolls-online-developer-left-reeling-by-xbox-layoffs-with-teams-gutted-senior-talent-gone-and-roadmaps-shifting-as-a-result/" target="_blank" rel="noopener">Elder Scrolls Online developer left reeling by Xbox layoffs—with teams gutted, senior talent gone, and roadmaps &#x27;shifting&#x27; as a result</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">A grim outcome from Xbox&#x27;s latest round of reaping.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/f22wYfMfpZvE3Av66zpmBc-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/gaming-industry/bethesda-game-studios-and-zenimax-hit-hard-by-xbox-layoffs-says-union/" target="_blank" rel="noopener">Bethesda Game Studios and ZeniMax hit hard by Xbox layoffs, says union</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">ZeniMax Online Studios and id Software have survived the latest bloodbath at Microsoft, but it sounds like they&#x27;ve been cut deeply.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/LmFEQELU7s3zESqJmBrdJZ-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/gaming-industry/arkane-temporarily-spared-in-xbox-bloodbath-thanks-to-french-law-but-its-future-is-up-in-the-air/" target="_blank" rel="noopener">Arkane temporarily spared in Xbox bloodbath thanks to French law, but its future is up in the air</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">Putting all my hopes and dreams on an independent Arkane.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://cdn.mos.cms.futurecdn.net/xKBnoERaRRpKUrwbaPyPHT-1280-80.jpg" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.pcgamer.com/software/security/microsoft-says-cryptographically-relevant-quantum-computers-could-arrive-sooner-than-previously-expected-as-it-bumps-its-qsp-timeline-to-2029/" target="_blank" rel="noopener">Microsoft says &#x27;cryptographically relevant quantum computers could arrive sooner than previously expected&#x27; as it bumps its QSP timeline to 2029</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=pcgamer.com&sz=32" alt="" loading="lazy"><span>PCGamer latest</span></div>
+            <p class="summary">As attacks get more advanced, security must follow.</p>
+          </div>
+        </article></div>
+      </section>
+      <section id="wereld" class="category" style="--accent:#2f6b3a">
+        <h2><span class="cat-icon">🌍</span> Wereld <span class="count">8</span></h2>
+        <div class="cards">
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/79fa1d2bff3f98bf33c1be74269065d0bbbfb006/350_0_4080_3264/master/4080.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=b2621e16840bc404aee3ca3d6915ca7e" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/world/2026/jul/06/cuba-suffers-third-nationwide-blackout-in-six-months" target="_blank" rel="noopener">‘Living like this is agony’: Cuba suffers third nationwide blackout in six months</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">Impoverished island was already struggling to keep the lights on before the US imposed a blockade in January Cuba on Monday suffered its third nationwide power outage since the start of the year, the state electricity company said. The impoverished island was already struggling to keep the lights on before the US president, Donald Trump, imposed an oil blockade in January, which has depleted the…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/ac2227e977f1fe31de4cb26ab33a750970eb0e42/405_0_2250_1800/master/2250.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=ed731c52fe6ac53bdf69866d6478d99a" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/world/2026/jul/06/canada-buys-12-tkms-german-norwegian-submarines-after-bidding-war" target="_blank" rel="noopener">Canada to buy 12 hi-tech German submarines after bidding war</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">TKMS beats South Korean rival to multibillion-dollar contract that will deepen Canada’s Nato ties Canada has selected a German consortium to build a dozen cutting-edge submarines in one of the country’s largest-ever defence contracts that will further deepen its Nato ties before a crucial summit this week. On Monday the prime minister, Mark Carney, announced the winner of a tightly contested…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/bf5ccc2961674dbec76fb95a086adcf8bba4e830/0_0_5000_4000/master/5000.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=a2f2ca26f41f76c7ed4f097dc398d867" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/world/2026/jul/06/cuban-zoo-celebrates-birth-of-bengal-tigers-amid-energy-crisis" target="_blank" rel="noopener">Cuban zoo celebrates birth of Bengal tigers amid energy crisis</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">Arrival of endangered cats, including rare white cub, revitalises team straining under fuel and medicine shortages For the Cuban zookeeper Ángel Cordero, the sight of four Bengal tiger cubs playing in a cage at the Cuban national zoo is a small miracle on an island stifled by shortages of fuel, medicine and days-long power outages. The birth of these endangered big cats – including an exceedingly…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/8484070a522057b1eb049841190d3af484688d7c/453_0_4854_3884/master/4854.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=63cfd02ddde8cf1f1533d8b84da22f52" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/world/2026/jul/05/rodriguez-defends-venezuelas-emergency-earthquake-response-as-bodies-expected-to-soar" target="_blank" rel="noopener">Rodríguez defends Venezuela’s emergency earthquake response as number of bodies expected to soar</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">Interim president says unrest will not break out despite anger at official response to the 24 June disaster Venezuela’s interim president has defended her country’s emergency response to the twin earthquakes that have killed more than 3,000 people, vowing the country would not descend into social unrest. Many Venezuelans have expressed anger at what they see as the US-backed government’s…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/2264b79b9425157f39e0961676cee0bac524b79e/292_0_2917_2333/master/2917.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=030c688833b69bdabe5b444411a6e40f" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/us-news/2026/jul/05/haitians-tps-republican-carlos-gimenez" target="_blank" rel="noopener">Florida Republican says deporting Haitians with TPS would be ‘huge mistake’</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">‘Haiti is a failed state’, says Carlos Giménez, congressman and Miami Cuban exile, after controversial court ruling Carlos Giménez, a Republican congressman from Florida, broke with the Trump administration on Sunday, calling on the White House to reconsider its push to eliminate temporary protected status (TPS) for Haitian migrants. Returning about 350,000 Haitians to their chaotic, dangerous…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/1dee08ef98db9936c02d788de83d276436c0f355/125_0_3750_3000/master/3750.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=ebe23c4607fe00db03cb2d5adfad462a" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/world/2026/jul/06/typhoon-maysak-kills-two-and-forces-thousands-to-evacuate-in-china" target="_blank" rel="noopener">Typhoon Maysak kills two and forces thousands to evacuate in China</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">Tropical storm causes extreme flooding in south of the country with heavy rainfall expected in coming days A tropical storm has killed two people, caused dam breaches and forced tens of thousands to evacuate in southern China. Typhoon Maysak killed two people in Nanning, in China’s southern Guangxi province. Maysak, which lashed Vietnam and China’s southern island province of Hainan over the…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/fbc1020b66fdc8b6ae41024c02d573489bf5b47c/483_154_1226_981/master/1226.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=e9747a64b25362ebf83b795b362ec826" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/world/2026/jul/06/china-missile-test-south-pacific" target="_blank" rel="noopener">China tests long-range missile in South Pacific in move Australia condemns as ‘destabilising to region’</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">Launch comes just hours after Australia and Fiji sign defence agreement as expert says timing not a coincidence China has conducted a long-range missile test in the South Pacific just hours after Australia signed a defence agreement with Fiji, sparking condemnation from Canberra and regional leaders. The Australian foreign minister, Penny Wong, said the missile test was “destabilising” to the…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://i.guim.co.uk/img/media/eb62fd438a63ba5f189cafa57f0e1e6778ee8022/117_0_2108_1687/master/2108.jpg?width=140&amp;quality=85&amp;auto=format&amp;fit=max&amp;s=36b4507a044498a7b8aa457ce3ec6677" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.theguardian.com/australia-news/live/2026/jul/07/australia-news-live-penny-wong-china-missile-test-pacific-anthony-albanese-solomon-islands-defence-royal-commission-antisemitism-meta-ntwnfb" target="_blank" rel="noopener">News live: Marles says Australia has expressed concern over China missile test as Taiwan criticises ‘provocation’</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=32" alt="" loading="lazy"><span>World news | The Guardian</span></div>
+            <p class="summary">Wong says missile test in Pacific a ‘destabilising act’ that could ‘lead to miscalculation’. Follow today’s news live Get our breaking news email , free app or daily news podcast Marles said he doubts China tested the long-range weapon yesterday in response to Anthony Albanese being in the Pacific to sign a new defence alliance with Fiji, but said Australia remains deeply concerned by the…</p>
+          </div>
+        </article></div>
+      </section>
+      <section id="reddit" class="category" style="--accent:#cc5023">
+        <h2><span class="cat-icon">👽</span> Reddit <span class="count">17</span></h2>
+        <div class="cards">
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/unxzjho6embh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=09d3fe1f5824e4c1305b84cc4e5cf215871b4fb4" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/interestingasfuck/comments/1uoz218/dutch_firefighter_after_dousing_a_fire_in/" target="_blank" rel="noopener">Dutch Firefighter After Dousing A Fire In Freezing Conditions</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/interestingasfuck</span></div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://external-preview.redd.it/dzFrbWNmcTcwbGJoMSLZUvzYLbEGXKKFysO10xGPK_I6O7HsNV41-LU-4CXq.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=f763051cd47090820206e0ceb49d7bdbda307168" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/interestingasfuck/comments/1uosspq/the_norwegian_army_released_a_video_showing_them/" target="_blank" rel="noopener">The Norwegian army released a video showing them performing the Viking celebration after Norway eliminated Brazil in the World Cup</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/interestingasfuck</span></div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://external-preview.redd.it/cXBuYzB3aTkyaWJoMYwV7IcrLyruYrN_kuKZk8EJ76W6HemK4fPlh9Hr3wU9.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=ae3bf4def5f6477946c184056fd060ad1d06a1d2" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/interestingasfuck/comments/1uohkrd/who_remembers_the_greatest_saved_goal_of_all_time/" target="_blank" rel="noopener">Who remembers the greatest saved goal of all time by René Higuita in 1995.</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/interestingasfuck</span></div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/6y5n893ndmbh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=456e040ced86e034b32476480861240880b2c332" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/Piracy/comments/1uoyyv6/how_the_turntables/" target="_blank" rel="noopener">How the turntables</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/Piracy</span></div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/i3j5xwzfmmbh1.jpg?width=140&amp;height=105&amp;auto=webp&amp;s=08f0a89545f829bd0a72054705f7f9b50c3ff572" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/3Dprinting/comments/1up0epa/my_very_first_3d_printing_and_blender_project/" target="_blank" rel="noopener">My very first 3D printing and Blender project! Spent 2 months building this custom &quot;Cassette Futurism&quot; vertical monitor station.</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/3Dprinting</span></div>
+            <p class="summary">Hi everyone! I recently got my first 3D printer and decided to dive straight into the deep end. This is my first ever project both in 3D printing and 3D modeling (learned Blender from scratch for this). Meet the Tall Tower Unit - a secondary vertical monitor inspired by 80s industrial computer gear in the &quot;cassette futurism&quot; style. Some build detail: -Designed completely by hand in Blender.…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://external-preview.redd.it/HU7RxX4AzWtN3yoYKzhYCVaS7bWZARrDA8aR5pos-OQ.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=8d5da9d8bca1a8a02c8aa3702ba9d9cbd8a25d45" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/pcmasterrace/comments/1uothj9/samsungs_profit_in_2026_will_exceed_its/" target="_blank" rel="noopener">Samsung’s Profit In 2026 Will Exceed Its Cumulative Profit Generated Over The Past 40 Years.</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/pcmasterrace</span></div>
+            <p class="summary">You have to buy your SSD at 5 times the price of one year ago but hey, shareholders are getting wealthier! submitted by /u/HeavenlyDemonEmperor to r/pcmasterrace [link] [comments]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/tvfopu0oikbh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=31fa2a98ce2a2669508135eafd639ebd92d66632" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/Eldenring/comments/1uor4ca/i_thinkim_finally_done_with_this_gamei_no_longer/" target="_blank" rel="noopener">I think…I’m finally done with this game…I no longer feel the need to login to the game when I have free time. Had my summon out for hours with no response these past few days. Everyone is Elden Lord now.</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/Eldenring</span></div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://external-preview.redd.it/Y2x5c3FseDZpbGJoMZfoxLvrF-zYqqX0FZKuBhy9Qgm0sObSs8LeG8VAPZcn.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=fbd7a1cc463d240b087217ef3f43ae55d6cca80c" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/Eldenring/comments/1uoups8/rellana_downed_in_20_seconds_using_divine_bird/" target="_blank" rel="noopener">Rellana Downed in 20 Seconds using Divine Bird Feathers</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/Eldenring</span></div>
+            <p class="summary">Strat shared by Cringe240 about a year ago on an Amazing Chest One Shot Challenge Video. submitted by /u/SaxSlaveGael to r/Eldenring [link] [comments]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/msw2k2xgqlbh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=99e4445e18a1516d08d63489b27b0321a4e95a7a" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/pcmasterrace/comments/1uovrfh/which_time_is_worse/" target="_blank" rel="noopener">Which time is worse?</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/pcmasterrace</span></div>
+            <p class="summary">If you were to be asked: Which inflation is worse between these two, then which would you pick? The time back when the mining period inflated the gpu prices or now when the AI era has led to artificial price increases of memory chips? submitted by /u/MilkSheikh007 to r/pcmasterrace [link] [comments]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/ci3gzldl8obh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=8be3d380692d486533b09e538a338c4371912064" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/pcmasterrace/comments/1up9mpy/heres_the_evolution_of_gpu_sizes/" target="_blank" rel="noopener">Here’s the evolution of GPU sizes</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/pcmasterrace</span></div>
+            <p class="summary">Just in case if you’re wondering, heres the evolution of the GPU sizes. We’ve come a long way gamers! submitted by /u/molmolz76 to r/pcmasterrace [link] [comments]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/dx1uf4jlyjbh1.gif?width=320&amp;crop=smart&amp;s=b98e90f6d2b51b2432d879727b054e1fa5d93408" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/Piracy/comments/1uop75m/how_i_genuinely_felt_when_a_youtube_ad_peeked/" target="_blank" rel="noopener">How I genuinely felt when a YouTube ad peeked through the corners for a millisecond on a video before UBlock came through</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/Piracy</span></div>
+            <p class="summary">I WAS SHOCKED, LIKE WAS UBLOCK NOT WORKING ANYMORE? DID THEY GET THEM?? and then my screen loaded again and Ublock successfully eliminated them now. Its been three years, this is the first time this year I&#x27;ve almost gotten a full ad, fucking gave me a heart attack submitted by /u/MetalHell6741 to r/Piracy [link] [comments]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://external-preview.redd.it/MGdieHV6cnEwbWJoMWgE_YWthZvrJ_vDQixaXjmQg5iQ7jValGTMTbfWQ_t9.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=354cf472326c4a0d25dd7f5a3b1336d6e2338876" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/3Dprinting/comments/1uox3fk/i_designed_a_pokeball_using_nasa_fabric/" target="_blank" rel="noopener">I designed a Pokeball using NASA fabric!</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/3Dprinting</span></div>
+            <p class="summary">https://makerworld.com/en/models/3018898-nasa-fabric-pokeball-no-ams-needed#profileId-3391581 submitted by /u/Joshhawk to r/3Dprinting [link] [comments]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/vevugz3r4nbh1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=c85aedddf0453f0e05ee45b2d5a3bd4d1bb42772" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/SteamDeck/comments/1up3a76/my_bf_ordered_a_valve_steam_deck_and_its_stolen/" target="_blank" rel="noopener">My bf ordered a Valve STEAM deck and it&#x27;s stolen by GLS</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/SteamDeck</span></div>
+            <p class="summary">I honestly can’t believe this is happening. My boyfriend ordered a Steam Deck, and the delivery has been a complete mess from start to finish by GLS. Last Friday, the tracking was marked as sent, but nothing arrived. Then today we finally got a notification saying it had been delivered to a pickup point. We went to check it immediately, hoping it was finally there. Instead of a Steam Deck, the…</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/tfawib0u1ibh1.jpg?width=140&amp;height=140&amp;auto=webp&amp;s=8e8a8bb86356d37d24787a18fd73044187ad1a07" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/Eldenring/comments/1uohith/which_bosses_made_you_think_how_the_fuck_do_i/" target="_blank" rel="noopener">Which bosses made you think &quot;HOW THE FUCK DO I KILL THAT&quot; when you saw them in the arena for the first time</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/Eldenring</span></div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://external-preview.redd.it/OQRXMYGIpQ8_4jLIKNlfFfbbxM5MHOAhVHH3LJ3tYXU.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=2a0375679fb406477ff98ce68b2d430d7c3de5bd" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/gadgets/comments/1uoxc6g/new_nintendo_switch_2_announced_for_europe_this/" target="_blank" rel="noopener">New Nintendo Switch 2 Announced for Europe This Fall: Will Be Slightly Heavier, But With User-Replaceable Batteries</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/gadgets</span></div>
+            
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://external-preview.redd.it/bnBjOG9yMWtjbWJoMduyaQK9PTdAjtQiodM3LpI_T9WcEYbbLd8L7UT1epgb.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6aa7d866506c64c367d17fa2fc7cccddd2285f97" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/Palworld/comments/1uoysyx/palworld_10_long_trailer/" target="_blank" rel="noopener">Palworld 1.0 long trailer</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/Palworld</span></div>
+            <p class="summary">Let’s goooooo! submitted by /u/fegodev to r/Palworld [link] [comments]</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="thumb" src="https://preview.redd.it/7ppzc1ueknbh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=43101e12b1d294cf261a72a436331adc7ab10573" alt="" loading="lazy">
+          
+          <div class="card-body">
+            <h3><a href="https://www.reddit.com/r/Palworld/comments/1up5v8o/you_know_a_game_is_gonna_be_sick_asf_when_this_is/" target="_blank" rel="noopener">You KNOW a game is gonna be sick asf when this is the first image you see of its gameplay</a></h3>
+            <div class="meta"><img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy"><span>r/Palworld</span></div>
+            
+          </div>
+        </article></div>
+      </section>
+
+  <footer>Gegenereerd door news_briefing.py</footer>
+</body>
+</html>
