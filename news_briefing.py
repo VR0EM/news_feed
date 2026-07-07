@@ -348,6 +348,7 @@ def build_html(by_category: dict, today: str) -> str:
     line-height: 1.55;
     color: #1c1c1c;
     background: #fafaf7;
+    overflow-x: hidden;
   }}
   @media (prefers-color-scheme: dark) {{
     body {{ background: #131417; color: #e8e6e1; }}
@@ -409,7 +410,7 @@ def build_html(by_category: dict, today: str) -> str:
 
   .cards {{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
     gap: 12px;
   }}
   .card {{
